@@ -1,14 +1,14 @@
 <template>
     <div id="app">
       <img alt="Vue logo" src="./assets/logo.png">
-      <HelloWorld msg="Hi from App.vue"/>
-      {{ipsums}}
+      <Header msg="Lorem Ipsum app"/>
+      raw ipsum[0] > {{ipsums[0]}}
     </div>
 </template>
 
 <script>
 import ipsumsApi from './services/ipsumsApi.js';
-import HelloWorld from './components/HelloWorld.vue';
+import Header from './components/Header.vue';
 
 
 export default {
@@ -19,7 +19,7 @@ export default {
         };
     },
     components: {
-        HelloWorld
+        Header
     }
 };
 </script>
