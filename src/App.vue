@@ -2,7 +2,7 @@
     <div id="app">
     <Header msg="Lorem Ipsum app"/>
         <!-- {{ipsums[0]}} -->
-    <Ipsums/>
+    <Ipsums v-bind:ipsums="ipsums"/>
     </div>
 </template>
 
@@ -32,6 +32,9 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    margin: 0 auto;
+}
+html {
+    background: red;
 }
 </style>
