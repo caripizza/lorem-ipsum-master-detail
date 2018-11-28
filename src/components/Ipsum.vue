@@ -1,6 +1,11 @@
 <template>
     <li>
-        I am Ipsum.vue!
+        <p>Title:{{ipsum.title}}</p>
+        <p>Category:{{ipsum.category}}</p>
+        <p>Author:{{ipsum.author}}</p>
+        <p>Author URL:{{ipsum.authorUrl}}</p>
+        <p>Published on:{{ipsum.publishedOn}}</p>
+        <p>Ipsum text:{{ipsum.body}}</p>
     </li>
 </template>
 

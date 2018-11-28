@@ -1,6 +1,5 @@
 <template>
     <ul>
-        I am Ipsums.vue
         <Ipsum v-for="ipsum in ipsums"
         v-bind:key="ipsum.title"
         v-bind:ipsum="ipsum"/>
@@ -22,6 +21,9 @@ export default {
 
 <style scoped>
 ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
     list-style: none;
     background-color: lightcoral;
     padding-left: 0;
