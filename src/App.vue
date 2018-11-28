@@ -2,14 +2,22 @@
     <div id="app">
       <img alt="Vue logo" src="./assets/logo.png">
       <HelloWorld msg="Hi from App.vue"/>
+      {{ipsums}}
     </div>
 </template>
 
 <script>
+import ipsumsApi from './services/ipsumsApi.js';
 import HelloWorld from './components/HelloWorld.vue';
+
 
 export default {
     name: 'app',
+    data() {
+        return {
+            ipsums: ipsumsApi.getIpsums(),
+        };
+    },
     components: {
         HelloWorld
     }
