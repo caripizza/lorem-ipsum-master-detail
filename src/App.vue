@@ -1,7 +1,8 @@
 <template>
     <div id="app">
     <Header msg="Lorem Ipsum app"/>
-        <!-- {{ipsums[0]}} -->
+    <IpsumDetail 
+        :ipsum="selected"/>
     <Ipsums 
         :ipsums="ipsums"
         :onSelect="handleSelect"/>
@@ -10,8 +11,9 @@
 
 <script>
 import ipsumsApi from './services/ipsumsApi.js';
-import Header from './components/Header.vue';
+import Header from './components/Header';
 import Ipsums from './components/Ipsums';
+import IpsumDetail from './components/IpsumDetail';
 
 export default {
     name: 'app',
@@ -23,7 +25,8 @@ export default {
     },
     components: {
         Header,
-        Ipsums
+        Ipsums,
+        IpsumDetail
     },
     methods: {
         handleSelect(ipsum) {
