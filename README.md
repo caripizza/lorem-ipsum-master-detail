@@ -1,29 +1,9 @@
-# lorem-ipsum-master-detail
+# Lorem Ipsum app
 
-## Project setup
-```
-npm install
-```
+## by Cari Palazzolo @caripizza
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Description:
+An Ipsum viewer/editor that displays a lists of ipsums; when an ipsum is clicked it populates a detail view with full information. Includes an input form and button for a title that adds a new ipsum and makes it the selected item.
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Technologies Used:
+Vue CLI, JavaScript, HTML, CSS
