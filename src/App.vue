@@ -1,15 +1,15 @@
 <template>
     <div id="app">
-      <img alt="Vue logo" src="./assets/logo.png">
-      <Header msg="Lorem Ipsum app"/>
-      raw ipsum[0] > {{ipsums[0]}}
+    <Header msg="Lorem Ipsum app"/>
+        <!-- {{ipsums[0]}} -->
+    <Ipsums/>
     </div>
 </template>
 
 <script>
 import ipsumsApi from './services/ipsumsApi.js';
 import Header from './components/Header.vue';
-
+import Ipsums from './components/Ipsums';
 
 export default {
     name: 'app',
@@ -19,7 +19,8 @@ export default {
         };
     },
     components: {
-        Header
+        Header,
+        Ipsums
     }
 };
 </script>

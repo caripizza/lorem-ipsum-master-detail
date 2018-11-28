@@ -1,13 +1,22 @@
 <template>
-    <p>test</p>
+    <ul>
+        I am Ipsums.vue
+        <Ipsum/>
+    </ul>
 </template>
 
 <script>
-export default {
+import Ipsum from './Ipsum';
 
+export default {
+    components: {
+        Ipsum
+    }
 };
 </script>
 
 <style>
-
+ul {
+    list-style: none;
+}
 </style>
