@@ -1,8 +1,9 @@
 <template>
     <ul>
         <Ipsum v-for="ipsum in ipsums"
-        v-bind:key="ipsum.title"
-        v-bind:ipsum="ipsum"/>
+            @click.native="onSelect(ipsum)"
+            :key="ipsum.title"
+            :ipsum="ipsum"/>
     </ul>
 </template>
 
@@ -11,7 +12,8 @@ import Ipsum from './Ipsum';
 
 export default {
     props: {
-        ipsums: Array
+        ipsums: Array,
+        onSelect: Function
     },
     components: {
         Ipsum

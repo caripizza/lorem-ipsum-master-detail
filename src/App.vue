@@ -2,7 +2,9 @@
     <div id="app">
     <Header msg="Lorem Ipsum app"/>
         <!-- {{ipsums[0]}} -->
-    <Ipsums v-bind:ipsums="ipsums"/>
+    <Ipsums 
+        :ipsums="ipsums"
+        :onSelect="handleSelect"/>
     </div>
 </template>
 
@@ -16,11 +18,18 @@ export default {
     data() {
         return {
             ipsums: ipsumsApi.getIpsums(),
+            selected: null
         };
     },
     components: {
         Header,
         Ipsums
+    },
+    methods: {
+        handleSelect(ipsum) {
+            this.selected = ipsum;
+            console.log(ipsum.title);
+        }
     }
 };
 </script>
