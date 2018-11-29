@@ -1,10 +1,12 @@
 <template>
+    <section>
     <ul>
         <IpsumItem v-for="ipsum in ipsums"
             @click.native="onSelect(ipsum)"
             :key="ipsum.title"
             :ipsum="ipsum"/>
     </ul>
+    </section>
 </template>
 
 <script>
@@ -21,6 +23,20 @@ export default {
 };
 </script>
 
-<style>
-
+<style scoped>
+section {
+    overflow: auto;
+}
+ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4px;
+    /* display: flex;
+    flex-direction: row; */
+    /* overflow: auto; */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* height: 50vh; */
+}
 </style>

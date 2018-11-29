@@ -16,9 +16,6 @@ export default {
 </script>
 
 <style>
-/* img {
-    max-height: 25vh;
-} */
 p {
     font-size: 18px;
 }

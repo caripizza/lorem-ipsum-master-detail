@@ -3,7 +3,7 @@
         <p class="title">{{ipsum.title}}</p>
         <p>Category: {{ipsum.category}}</p>
         <p>Author: {{ipsum.author}}</p>
-        <a :href="ipsum.authorUrl">Author URL</a>
+        <a :href="ipsum.authorUrl" target="_blank">Author URL</a>
         <p>Published on: {{ipsum.publishedOn}}</p>
     </li>
 </template>
