@@ -20,6 +20,9 @@ div {
 }
 h1 {
     margin: 0 auto;
-    color: purple;
+    color: yellow;
+}
+img {
+    width: 10%;
 }
 </style>

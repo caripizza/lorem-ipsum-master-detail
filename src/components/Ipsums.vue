@@ -27,17 +27,34 @@ export default {
 section {
     height: 30vh;
     overflow: auto;
+    border: 2px solid red;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: yellow; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }
 ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
+    grid-gap: 4px;
     /* display: flex;
     flex-direction: row; */
     /* overflow: auto; */
     list-style: none;
-    background-color: lightcoral;
-    padding-left: 0;
+    padding: 0;
+    margin: 0;
     /* height: 50vh; */
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <section v-if="ipsum">
-        <p v-html="ipsum.body"></p>
+        <p v-html="ipsum.body" class="detail-p-tag"></p>
     </section>
     <section v-else>
         <p class="select-msg">Please select an ipsum!</p>
@@ -20,14 +20,17 @@ export default {
     max-height: 25vh;
 } */
 p {
-    font-size: 10px;
+    font-size: 18px;
+}
+p.detail-p-tag {
+    color: yellow;
 }
 p.select-msg {
     font-size: 20px;
     font-style: italic;
     color: purple;
     font-weight: bold;
-    background-color: green;
+    background-color: rgb(250, 21, 200);
     padding: 50px;
 }
 </style>

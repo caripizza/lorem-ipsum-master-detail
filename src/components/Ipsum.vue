@@ -1,6 +1,6 @@
 <template>
     <li>
-        <p>Title: {{ipsum.title}}</p>
+        <p class="title">{{ipsum.title}}</p>
         <p>Category: {{ipsum.category}}</p>
         <p>Author: {{ipsum.author}}</p>
         <a :href="ipsum.authorUrl">Author URL</a>
@@ -20,19 +20,24 @@ export default {
 
 <style scoped>
 li {
-    border: 2px solid blue;
     background: white;
-}
-/* img {
-    max-height: 15vh;
-} */
-p {
-    font-size: 10px;
-}
-a {
-    font-size: 10px;
+    padding: 2px;
 }
 li:hover {
-    background-color: lightskyblue;
+    background-color: yellow;
+}
+p {
+    font-size: 12px;
+    margin: 2px;
+    color: purple;
+}
+p.title {
+    font-weight: bold;
+    font-size: 20px;
+    /* margin: 0 auto; */
+    color: purple;
+}
+a {
+    font-size: 12px;
 }
 </style>
