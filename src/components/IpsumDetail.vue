@@ -2,6 +2,9 @@
     <section v-if="ipsum">
         <span>Ipsum text:<p v-html="ipsum.body"></p></span>
     </section>
+    <section v-else>
+        Please select an ipsum
+    </section>
 </template>
 
 <script>
