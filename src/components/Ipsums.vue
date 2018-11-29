@@ -3,6 +3,7 @@
         <IpsumList 
             :ipsums="ipsums"
             :onSelect="handleSelect"/>
+        <AddIpsum :onAdd="handleAdd"/>
         <Ipsum :ipsum="selected"/>
     </section>
 </template>
@@ -11,6 +12,7 @@
 import ipsumsApi from '../services/ipsumsApi';
 import Ipsum from './Ipsum';
 import IpsumList from './IpsumList';
+import AddIpsum from './AddIpsum';
 
 export default {
     data() {
@@ -22,11 +24,15 @@ export default {
     components: {
         Ipsum,
         IpsumList,
+        AddIpsum
     },
     methods: {
         handleSelect(ipsum) {
             this.selected = ipsum === this.selected ? null : ipsum;
-            console.log(ipsum.title);
+        },
+        handleAdd(ipsum) {
+            this.ipsums.push(ipsum);
+            this.handleSelect(ipsum);
         }
     }
 };

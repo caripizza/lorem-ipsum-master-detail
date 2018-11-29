@@ -30,18 +30,19 @@ span {
     justify-content: space-between;
     margin-left: 15px;
     color: yellow;
-    font-size: 18px;
+    font-size: 16px;
 }
 span.title {
     color: yellow;
 }
 p {
-    font-size: 18px;
+    font-size: 14px;
 }
 p.detail-p-tag {
     border-top: 1px solid yellow;
     color: yellow;
     margin-bottom: 40px;
+    padding-top: 20px;
 }
 p.select-msg {
     font-size: 20px;

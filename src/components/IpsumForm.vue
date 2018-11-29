@@ -1,35 +1,29 @@
 <template>
-    <section>
-        <div v-if="!show">
-            <button @click="show = true">Click to Add an Ipsum</button>
-        </div>
-        <div v-else>
-            <h2>Add an Ipsum</h2>
-            <form @submit.prevent="handleSubmit">
-                <label>
-                    Title:<input v-model="ipsum.title" required>
-                </label>
-                <label>
-                    Category:<input v-model="ipsum.category" required>
-                </label>
-                <label>
-                    Author:<input v-model="ipsum.author" required>
-                </label>
-                <label>
-                    Author Url:<input v-model="ipsum.authorUrl" required>
-                </label>
-                <label>
-                    Published on:<input v-model="ipsum.publishedOn" required>
-                </label>
-                <label>
-                    Body text:<input v-model="ipsum.body" required>
-                </label>
-                <label>
-                    <button>Add</button>
-                </label>
-            </form>
-        </div>
-    </section>
+    <form @submit.prevent="onAdd(ipsum)">
+        <label>
+            Title:<input v-model="ipsum.title" required>
+        </label>
+        <label>
+            Category:<input v-model="ipsum.category" required>
+        </label>
+        <label>
+            Author:<input v-model="ipsum.author" required>
+        </label>
+        <br>
+        <label>
+            Author Url:<input v-model="ipsum.authorUrl" required>
+        </label>
+        <label>
+            Published on:<input v-model="ipsum.publishedOn" required>
+        </label>
+        <label>
+            Body text:<textarea cols="30" v-model="ipsum.body" required></textarea>
+        </label>
+        <label>
+            <button type="submit">Add</button>
+            <button type="button" @click="onCancel">Cancel</button>
+        </label>
+    </form>
 </template>
 
 <script>
@@ -48,18 +42,21 @@ export default {
         };
     },
     props: {
-        onAdd: Function
-    },
-    methods: {
-        handleSubmit() {
-            this.onAdd(this.ipsum);
-        }
+        onAdd: Function,
+        onCancel: Function
     }
 };
 </script>
 
 <style scoped>
-section {
-    background-color: lightblue;
+input, textarea {
+    margin: 0px 10px 0px 10px;
+}
+textarea {
+    margin-bottom: -6px;
+    height: 40px;
+}
+label {
+    font-size: 10px;
 }
 </style>

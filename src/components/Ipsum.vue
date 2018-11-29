@@ -1,13 +1,14 @@
 <template>
     <section>
-        <IpsumForm :onAdd="handleAdd"/>
         <IpsumDetail :ipsum="ipsum"/>
+        <!-- <IpsumForm :onAdd="handleAdd"
+            :onCancel="() => show = false"/> -->
     </section>
 </template>
 
 <script>
 import IpsumDetail from './IpsumDetail';
-import IpsumForm from './IpsumForm';
+// import IpsumForm from './IpsumForm';
 
 export default {
     props: {
@@ -15,13 +16,13 @@ export default {
     },
     components: {
         IpsumDetail,
-        IpsumForm
+        // IpsumForm
     },
-    methods: {
-        handleAdd(ipsum) {
-            console.log('you want to add', JSON.stringify(ipsum));
-        }
-    }
+    // methods: {
+    //     handleAdd(ipsum) {
+    //         this.ipsums.push(ipsum);
+    //     }
+    // }
 };
 </script>
 

@@ -23,6 +23,6 @@ h1 {
     color: yellow;
 }
 img {
-    width: 10%;
+    width: 150px;
 }
 </style>
