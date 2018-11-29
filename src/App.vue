@@ -1,11 +1,11 @@
 <template>
     <div id="app">
     <Header msg="Lorem Ipsum app"/>
-    <IpsumDetail 
-        :ipsum="selected"/>
     <Ipsums 
         :ipsums="ipsums"
         :onSelect="handleSelect"/>
+    <IpsumDetail 
+        :ipsum="selected"/>
     </div>
 </template>
 

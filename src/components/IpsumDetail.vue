@@ -1,9 +1,9 @@
 <template>
     <section v-if="ipsum">
-        <span>Ipsum text:<p v-html="ipsum.body"></p></span>
+        <p v-html="ipsum.body"></p>
     </section>
     <section v-else>
-        Please select an ipsum
+        <p class="select-msg">Please select an ipsum!</p>
     </section>
 </template>
 
@@ -16,10 +16,18 @@ export default {
 </script>
 
 <style>
-img {
+/* img {
     max-height: 25vh;
-}
+} */
 p {
     font-size: 10px;
+}
+p.select-msg {
+    font-size: 20px;
+    font-style: italic;
+    color: purple;
+    font-weight: bold;
+    background-color: green;
+    padding: 50px;
 }
 </style>
