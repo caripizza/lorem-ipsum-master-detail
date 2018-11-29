@@ -1,7 +1,6 @@
 <template>
     <section v-if="ipsum">
-        I am IpsumDetail.vue
-        {{ipsum.title}}
+        <span>Ipsum text:<p v-html="ipsum.body"></p></span>
     </section>
 </template>
 
@@ -14,5 +13,10 @@ export default {
 </script>
 
 <style>
-
+img {
+    max-height: 25vh;
+}
+p {
+    font-size: 10px;
+}
 </style>

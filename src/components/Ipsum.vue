@@ -5,7 +5,8 @@
         <p>Author: {{ipsum.author}}</p>
         <p>Author URL: {{ipsum.authorUrl}}</p>
         <p>Published on: {{ipsum.publishedOn}}</p>
-        <p>Ipsum text: {{ipsum.body}}</p>
+        <p>Ipsum raw text: {{ipsum.body}}</p>
+        <span>Ipsum text:<p v-html="ipsum.body"></p></span>
     </li>
 </template>
 
@@ -21,5 +22,11 @@ export default {
 li {
     border: 2px solid blue;
     background: white;
+}
+img {
+    max-height: 15vh;
+}
+p {
+    font-size: 10px;
 }
 </style>
