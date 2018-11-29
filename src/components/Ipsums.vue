@@ -1,24 +1,33 @@
 <template>
     <section>
-    <ul>
-        <Ipsum v-for="ipsum in ipsums"
-            @click.native="onSelect(ipsum)"
-            :key="ipsum.title"
-            :ipsum="ipsum"/>
-    </ul>
+        <IpsumList 
+            v-bind:ipsums="ipsums"
+            v-bind:onSelect="handleSelect"/>
+        <Ipsum v-bind:ipsum="selected"/>
     </section>
 </template>
 
 <script>
+import ipsumsApi from '../services/ipsumsApi';
 import Ipsum from './Ipsum';
+import IpsumList from './IpsumList';
 
 export default {
-    props: {
-        ipsums: Array,
-        onSelect: Function
+    data() {
+        return {
+            ipsums: ipsumsApi.getIpsums(),
+            selected: null
+        };
     },
     components: {
-        Ipsum
+        Ipsum,
+        IpsumList
+    },
+    methods: {
+        handleSelect(ipsum) {
+            this.selected = ipsum === this.selected ? null : ipsum;
+            console.log(ipsum.title);
+        }
     }
 };
 </script>
