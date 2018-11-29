@@ -2,8 +2,6 @@
     <div id="app">
     <Header msg="Lorem Ipsum app"/>
     <Ipsums/>
-    <!-- <IpsumDetail 
-        :ipsum="selected"/> -->
     </div>
 </template>
 

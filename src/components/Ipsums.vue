@@ -1,9 +1,9 @@
 <template>
     <section>
         <IpsumList 
-            v-bind:ipsums="ipsums"
-            v-bind:onSelect="handleSelect"/>
-        <Ipsum v-bind:ipsum="selected"/>
+            :ipsums="ipsums"
+            :onSelect="handleSelect"/>
+        <Ipsum :ipsum="selected"/>
     </section>
 </template>
 
@@ -21,7 +21,7 @@ export default {
     },
     components: {
         Ipsum,
-        IpsumList
+        IpsumList,
     },
     methods: {
         handleSelect(ipsum) {
@@ -34,8 +34,7 @@ export default {
 
 <style scoped>
 section {
-    height: 30vh;
-    /* overflow: auto; */
+    height: 20vh;
     border: 2px solid red;
 }
 /* width */

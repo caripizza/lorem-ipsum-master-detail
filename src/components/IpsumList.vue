@@ -29,14 +29,10 @@ section {
 }
 ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 4px;
-    /* display: flex;
-    flex-direction: row; */
-    /* overflow: auto; */
     list-style: none;
     padding: 0;
     margin: 0;
-    /* height: 50vh; */
 }
 </style>

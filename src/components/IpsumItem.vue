@@ -1,10 +1,6 @@
 <template>
     <li>
         <p class="title">{{ipsum.title}}</p>
-        <p>Category: {{ipsum.category}}</p>
-        <p>Author: {{ipsum.author}}</p>
-        <a :href="ipsum.authorUrl" target="_blank">Author URL</a>
-        <p>Published on: {{ipsum.publishedOn}}</p>
     </li>
 </template>
 
@@ -25,18 +21,10 @@ li {
 li:hover {
     background-color: yellow;
 }
-p {
-    font-size: 12px;
-    margin: 2px;
-    color: purple;
-}
 p.title {
+    margin: 2px;
     font-weight: bold;
     font-size: 20px;
-    /* margin: 0 auto; */
     color: purple;
-}
-a {
-    font-size: 12px;
 }
 </style>
